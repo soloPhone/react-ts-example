@@ -1,0 +1,12 @@
+root = true
+
+[*]
+indent_style = space # 缩紧风格，可选配置有tab和space
+indent_size = 2 # 缩进大小，可以设定为1-8的数字
+charset = utf-8 # 编码格式
+trim_trailing_whitespace = true # 去除多余的空格
+insert_final_newline = true # 在行尾插入一行
+end_of_line = lf # 换行符
+
+[*.md]
+trim_trailing_whitespace = false

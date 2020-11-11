@@ -1,0 +1,23 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "modules": false // 目的：不要将es6的import和export关键词处理成commonJS的模块的引入和导出，因为webpack的tree-shaking只针对es6的模块系统有效
+      }
+    ],
+    "@babel/preset-react", "@babel/preset-typescript"
+  ],
+  "plugins": [
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "corejs": {
+          "version": 3,
+          "proposals": true
+        },
+        "useESModules": true
+      }
+    ]
+  ]
+}
