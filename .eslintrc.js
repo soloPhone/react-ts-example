@@ -120,7 +120,6 @@ module.exports = {
     'no-plusplus': OFF,
     'no-console': OFF,
     'class-methods-use-this': ERROR,
-    'jsx-quotes': [ERROR, 'prefer-single'],
     'global-require': OFF,
   },
 }
