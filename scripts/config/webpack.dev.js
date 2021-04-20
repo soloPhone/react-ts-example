@@ -15,5 +15,6 @@ module.exports = merge(common, {
     hot: true, // 热更新
     publicPath: '/',
     contentBase: './dist',
+    historyApiFallback: true,
   },
 })

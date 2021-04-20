@@ -89,6 +89,7 @@ module.exports = {
         excludedPackages: ['koa', 'sax'],
       },
     ],
+    'unicorn/consistent-function-scoping': OFF,
     'unicorn/prefer-query-selector': ERROR,
     'unicorn/no-null': OFF,
 
@@ -107,6 +108,7 @@ module.exports = {
     'react/state-in-constructor': OFF,
     'react/jsx-props-no-spreading': OFF,
     'react/prop-types': OFF,
+    'react/react-in-jsx-scope': OFF,
 
     'jsx-a11y/click-events-have-key-events': OFF,
     'jsx-a11y/no-noninteractive-element-interactions': OFF,
@@ -121,5 +123,7 @@ module.exports = {
     'no-console': OFF,
     'class-methods-use-this': ERROR,
     'global-require': OFF,
+    'max-classes-per-file': OFF,
+    camelcase: OFF,
   },
 }
