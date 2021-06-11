@@ -1,5 +1,7 @@
-import { useReducer, useRef } from 'react'
+import { useReducer, useRef, useEffect } from 'react'
 import { useFetch, useInfiniteScroll, useLazyLoad } from '../hooks/customeHooks'
+import { api } from '../api'
+import { useAbort } from '../api/request'
 
 type State = {
   images: string[]
@@ -41,6 +43,15 @@ function Gallery() {
   useInfiniteScroll(bottomBoundaryRef, pagerDispatch)
   useLazyLoad('.card-img-top', imgData)
 
+  useEffect(() => {
+    setTimeout(() => api.getImageList(), 1000)
+  }, [])
+
+  const handleAbort = () => {
+    console.log(1212)
+    useAbort.abortRequest()
+  }
+
   return (
     <div className="gallery">
       <nav className="navbar bg-light">
@@ -48,6 +59,9 @@ function Gallery() {
           <a href="/gallery">Gallery</a>
         </div>
       </nav>
+      <button type="button" onClick={handleAbort}>
+        abort
+      </button>
       <div id="images" className="container">
         <div className="row">
           {imgData.images.map((image, index) => {

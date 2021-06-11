@@ -16,5 +16,14 @@ module.exports = merge(common, {
     publicPath: '/',
     contentBase: './dist',
     historyApiFallback: true,
+    proxy: {
+      '/test': {
+        target: 'https://picsum.photos',
+        pathRewrite: {
+          '/test': '',
+        },
+        changeOrigin: true,
+      },
+    },
   },
 })

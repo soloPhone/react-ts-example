@@ -125,5 +125,6 @@ module.exports = {
     'global-require': OFF,
     'max-classes-per-file': OFF,
     camelcase: OFF,
+    'no-underscore-dangle': OFF,
   },
 }
